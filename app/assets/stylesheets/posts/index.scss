@@ -1,42 +1,39 @@
-.container {
-  padding-top: 0;
 
-  .posts {
-    &__image {
-      &__pc {
-        width: 100%;
-        height: 300px;
+.posts {
+  &__image {
+    &__pc {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  &__newest {
+    &__t {
+
+    }
+    &--all {
+      &__p:first-child {
+        border: 1px solid #cfcfcf;
+        width: 30%;
+        display: inline-block;
+        margin-left: 0px;
+      }
+
+      &__p {
+        border: 1px solid #cfcfcf;
+        width: 20%;
+        display: inline-block;
+        margin-left: 10px;
       }
     }
+  }
 
-    &__newest {
-      &__t {
+  &__ranking {
 
-      }
-      &--all {
-        &__p:first-child {
-          border: 1px solid #cfcfcf;
-          width: 30%;
-          display: inline-block;
-          margin-left: 0px;
-        }
+  }
 
-        &__p {
-          border: 1px solid #cfcfcf;
-          width: 30%;
-          display: inline-block;
-          margin-left: 3px;
-        }
-      }
-    }
+  &__category {
 
-    &__ranking {
-
-    }
-
-    &__category {
-
-    }
   }
 }
 
@@ -46,6 +43,12 @@
   position: absolute;
   left: -3%;
   top: 30%;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slick-prev:hover {
+  color: blue;
 }
 
 .slick-next {
@@ -53,4 +56,7 @@
   position: absolute;
   right: -2%;
   top: 30%;
+  cursor: pointer;
+  border-radius: 50%;
+
 }
