@@ -1,0 +1,25 @@
+.container {
+  padding: 35px 0;
+  position: relative;
+  height: 200px;
+
+  h1 {
+    text-align: center;
+    font-size: 35px;
+    padding-bottom: 20px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .new-btn {
+    position: absolute;
+    left: 44%;
+    background: #26a69a;
+    border: 1px solid #26a69a;
+    color: white;
+    padding: 10px 20px;
+
+  }
+}
