@@ -1,25 +1,20 @@
-%nav.navbar.navbar-expand-lg.navbar-light.bg-dark
-  = link_to 'Putq', '#', class: "navbar-brand.text-white"
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light.nav-border
+  = link_to 'Putq', posts_path, class: "navbar-brand text"
   %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
-    %ul.navbar-nav.mr-auto
-      %li.nav-item.active
-        %a.nav-link{:href => "#"}
-          Home
-          %span.sr-only (current)
+    %form.form-inline.my-2.my-lg-0
+      %input.search-form.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+    %ul.navbar-nav.right
       %li.nav-item
         %a.nav-link{:href => "#"} Link
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-          Dropdown
+          = image_tag('user.png', class: 'user-nav', width: 40, height: 40)
         .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-          %a.dropdown-item{:href => "#"} Action
-          %a.dropdown-item{:href => "#"} Another action
+          = link_to 'マイページ', '#', class: "dropdown-item"
+          = link_to 'プロフィール編集', '#', class: "dropdown-item"
           .dropdown-divider
-          %a.dropdown-item{:href => "#"} Something else here
-      %li.nav-item
-        %a.nav-link.disabled{:href => "#"} Disabled
-    %form.form-inline.my-2.my-lg-0
-      %input.form-control.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+          = link_to 'ログアウト', '#', class: "dropdown-item"
+
