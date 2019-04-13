@@ -2,19 +2,25 @@
 .posts {
   &--all {
     &--new {
-      &__title {
+      margin-top: 70px;
 
+      &__title {
+        p {
+          font-size: 1.3rem;
+          font-weight: bold;
+          text-align: left;
+        }
       }
       &__post {
         &--each {
           border: 1px solid #cfcfcf;
           width: 200px;
-          margin: 0 auto;
+          margin-left: 10px;
 
 
           &__user {
             display: flex;
-            height: 50px;
+            height: 70px;
             border-bottom: 1px solid #cfcfcf;
 
             .avatar {
