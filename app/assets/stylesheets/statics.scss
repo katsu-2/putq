@@ -1,3 +1,5 @@
+@import 'common';
+
 .home-wrap {
   .top-container {
     .top-main {
@@ -7,14 +9,14 @@
         position: absolute;
         left: 25%;
         top: 40%;
-        color: white;
-        font-size: 90px;
+        color: $white;
+        font-size: 80px;
 
         span {
 
         }
         strong {
-          color: #17a2b8;
+          color: $mainblue;
         }
         span {
 

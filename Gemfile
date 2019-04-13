@@ -6,6 +6,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'

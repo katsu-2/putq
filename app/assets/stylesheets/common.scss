@@ -1,7 +1,10 @@
-.container {
-  padding: 35px 0;
-  position: relative;
-  height: 200px;
+$mainblue: #4CADE0;
+$white: #fff;
+$black: #333;
+
+// .container {
+//   padding: 0;
+//   position: relative;
 
   h1 {
     text-align: center;
@@ -16,10 +19,10 @@
   .new-btn {
     position: absolute;
     left: 44%;
-    background: #26a69a;
-    border: 1px solid #26a69a;
+    background: $mainblue;
+    border: 1px solid $mainblue;
     color: white;
     padding: 10px 20px;
 
   }
-}
+// }
