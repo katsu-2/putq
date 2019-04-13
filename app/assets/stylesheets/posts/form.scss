@@ -1,0 +1,57 @@
+@import 'common';
+.form--around {
+  display: flex;
+
+  .form__post {
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px 20px;
+
+    &__title {
+      &__label {
+
+      }
+      &__field {
+        .form-field {
+
+        }
+      }
+    }
+    &__content {
+      &__label {
+
+      }
+      &__field {
+
+      }
+    }
+    &__answer {
+      &__label {
+
+      }
+      &__field {
+
+      }
+    }
+    &__category {
+      &__label {
+
+      }
+    }
+    &__submit {
+      p {
+        line-height: 2;
+
+        .submit-btn {
+          color: $white;
+          font-weight: 600;
+          font-size: 1.2rem;
+          background: $mainblue;
+          border-radius: 5px;
+              box-shadow: 0 3px 1px -2px rgba(0,0,0,.2);
+
+        }
+      }
+    }
+  }
+}
