@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.order('created_at desc')
+  end
+
+  def show
+    @post = Post.find(params[:id])
   end
 
   def new
@@ -10,7 +14,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      redirect_to root_path
+      redirect_to posts_path
     else
       render 'new'
     end
