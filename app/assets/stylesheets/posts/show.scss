@@ -1,0 +1,72 @@
+@import 'common';
+.around {
+  .posts--show {
+    background: $white;
+    margin: 40px auto;
+    width: 70%;
+
+    &__user {
+      display: flex;
+
+      &__avatar {
+        width: 50px;
+        height: 50px;
+        padding: 20px;
+
+        .user-pic {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      &__name {
+        padding: 20px;
+        margin-left: 20px;
+        color: $mainblue;
+      }
+    }
+    &__title {
+      padding: 20px;
+
+      &__t {
+        h2 {
+          font-weight: bold;
+        }
+      }
+    }
+    &__category {
+      padding: 0 20px 20px 20px;
+      &__c {
+        span {
+          p {
+            display: inline-block;
+            background: #cfcfcf;
+            padding: 5px 10px;
+            font-size: 0.8rem;
+            margin: 0 5px 0 0;
+          }
+        }
+      }
+    }
+    &__content {
+      padding: 40px 20px;
+
+      & h2 {
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      &__c {
+        line-height: 2;
+      }
+    }
+    &__answer {
+      padding: 20px;
+
+      & h2 {
+        font-weight: bold;
+      }
+      &__a {
+
+      }
+    }
+  }
+}
