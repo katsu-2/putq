@@ -1,0 +1,26 @@
+.form--around
+  .form__post
+    = form_with model: Post.new do |f|
+      .form__post__title
+        .form__post__title__label
+          = f.label :タイトル, class: "form-title"
+        .form__post__title__field
+          = f.text_field :title, class: "form-field", placeholder: "例）プログラミングの問題"
+      .form__post__content
+        .form__post__content__label
+          = f.label :問題, class: "form-title"
+        .form__post__content__field
+          = f.text_area :content, class: "form-field", rows: 8, placeholder: "ここに問題文を書いてください"
+      .form__post__answer
+        .form__post__answer__label
+          = f.label :答え, class: "form-title"
+        .form__post__answer__field
+          = f.text_area :answer, class: "form-field",
+        rows: 8, placeholder: "ここに答えをください"
+      .form__post__category
+        .form__post__category__label
+          = f.label :カテゴリー, class: "form-title"
+      .form__post__submit
+        %p
+          = f.submit "問題の作成", class: "submit-btn"
+

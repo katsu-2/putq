@@ -1,0 +1,29 @@
+.around
+  .posts--show
+    .posts--show__user
+      %p.posts--show__user__avatar
+        = image_tag('user.png', class: "user-pic", alt: "ユーザーイメージ")
+      .posts--show__user__name
+        %p テストユーザー
+    .posts--show__title
+      .posts--show__title__t
+        %h2
+          = @post.title
+    .posts--show__category
+      .posts--show__category__c
+        %span.category
+          %p プログラミング
+        %span.category
+          %p Ruby
+        %span.category
+          %p pc
+        %span.category
+          %p エンジニア
+    .posts--show__content
+      %h2 問題
+      .posts--show__content__c
+        = @post.content
+    .posts--show__answer
+      %h2 答え
+      .posts--show__answer__a
+        = @post.answer

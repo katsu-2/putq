@@ -2,9 +2,10 @@ $mainblue: #4CADE0;
 $white: #fff;
 $black: #333;
 
-// .container {
-//   padding: 0;
-//   position: relative;
+  body {
+    background: #e9ecefba;
+  }
+
 
   h1 {
     text-align: center;
@@ -25,4 +26,13 @@ $black: #333;
     padding: 10px 20px;
 
   }
-// }
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form-field {
+  width: 100%;
+  border-radius: 5px;
+}
