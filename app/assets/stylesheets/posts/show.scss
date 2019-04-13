@@ -59,13 +59,27 @@
       }
     }
     &__answer {
-      padding: 20px;
+      padding: 0 20px 20px 20px;
 
       & h2 {
         font-weight: bold;
+        margin-bottom: 20px;
       }
       &__a {
 
+      }
+    }
+    &__btn {
+      padding: 20px;
+      &__b {
+        .btn_b {
+          border: 1px solid $mainblue;
+          margin-right: 5px;
+          border-radius: 5px;
+          padding: 5px 10px;
+          background: $mainblue;
+          color: $white;
+        }
       }
     }
   }

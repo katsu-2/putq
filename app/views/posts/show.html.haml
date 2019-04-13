@@ -27,3 +27,7 @@
       %h2 答え
       .posts--show__answer__a
         = @post.answer
+    .posts--show__btn
+      .posts--show__btn__b
+        = link_to '編集', edit_post_path(@post), class: "edit-btn btn_b"
+        = link_to '削除', post_path(@post), class: "delete-btn btn_b", method: :delete, data: { confirm: "削除してもいいですか？"}
