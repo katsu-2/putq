@@ -4,5 +4,5 @@
 -else
   = link_to post_likes_path(@post), method: :post, remote: true do
     = fa_icon 'heart', id: "heart_normal"
-%span
+%span#like_span
   = @post.liked_users.count
