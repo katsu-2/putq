@@ -2,7 +2,7 @@
   = link_to 'Putq', posts_path, class: "navbar-brand text"
   %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
-  #navbarSupportedContent.collapse.navbar-collapse
+  #navbarSupportedContent.collapse.navbar-collapse.nav-posi
     - if user_signed_in?
       %form.form-inline.my-2.my-lg-0
         %input.search-form.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
@@ -12,6 +12,9 @@
           %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
             = image_tag('user.png', class: 'user-nav', width: 40, height: 40)
           .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+            = link_to '問題を作成', new_post_path, class: "dropdown-item"
+            = link_to 'フォルダを作成', new_post_path, class: "dropdown-item"
+            .dropdown-divider
             = link_to 'マイページ', '#', class: "dropdown-item"
             = link_to 'プロフィール編集', '#', class: "dropdown-item"
             .dropdown-divider
