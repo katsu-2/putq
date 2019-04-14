@@ -22,11 +22,11 @@
     .posts--show__content
       %h2 問題
       .posts--show__content__c
-        = @post.content
+        = simple_format(@post.content)
     .posts--show__answer
       %h2 答え
       .posts--show__answer__a
-        = @post.answer
+        = simple_format(@post.answer)
     .posts--show__btn
       .posts--show__btn__b
         = link_to '編集', edit_post_path(@post), class: "edit-btn btn_b"

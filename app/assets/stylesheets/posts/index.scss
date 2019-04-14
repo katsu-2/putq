@@ -6,11 +6,15 @@
 
       &__title {
         display: flex;
+        p:first-child {
+          margin: 0;
+        }
+
         p {
           font-size: 1.3rem;
           font-weight: bold;
           text-align: left;
-          margin-right: 20px;
+          margin-left: 35px;
         }
       }
       &__post {
