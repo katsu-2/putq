@@ -3,18 +3,22 @@
   %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
-    %form.form-inline.my-2.my-lg-0
-      %input.search-form.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
-      %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
-    %ul.navbar-nav.right
+    - if user_signed_in?
+      %form.form-inline.my-2.my-lg-0
+        %input.search-form.mr-sm-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+        %button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+      %ul.navbar-nav.right
+        %li.nav-item.dropdown
+          %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            = image_tag('user.png', class: 'user-nav', width: 40, height: 40)
+          .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+            = link_to 'マイページ', '#', class: "dropdown-item"
+            = link_to 'プロフィール編集', '#', class: "dropdown-item"
+            .dropdown-divider
+            = link_to 'ログアウト', '#', class: "dropdown-item"
+    - else
       %li.nav-item
-        %a.nav-link{:href => "#"} Link
-      %li.nav-item.dropdown
-        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-          = image_tag('user.png', class: 'user-nav', width: 40, height: 40)
-        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-          = link_to 'マイページ', '#', class: "dropdown-item"
-          = link_to 'プロフィール編集', '#', class: "dropdown-item"
-          .dropdown-divider
-          = link_to 'ログアウト', '#', class: "dropdown-item"
+        = link_to '新規登録', new_user_registration_path, class: "nav-link"
+        = link_to 'ログイン', new_user_session_path, class: "nav-link"
+
 
