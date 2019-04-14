@@ -1,0 +1,8 @@
+- if current_user.already_liked?(@post)
+  = link_to post_like_path(@post), method: :delete, remote: true do
+    = fa_icon 'heart', id: "heart_red"
+-else
+  = link_to post_likes_path(@post), method: :post, remote: true do
+    = fa_icon 'heart', id: "heart_normal"
+%span
+  = @post.liked_users.count

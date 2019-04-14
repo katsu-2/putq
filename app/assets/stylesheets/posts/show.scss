@@ -83,5 +83,31 @@
         }
       }
     }
+    &__like {
+      position: relative;
+
+      a {
+        position: absolute;
+        right: 9%;
+        bottom: 5%;
+
+        #heart_red {
+          color: red;
+          font-size: 1.2rem;
+        }
+
+        #heart_normal {
+          color: gray;
+          font-size: 1.2rem;
+        }
+      }
+
+      span {
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        font-size: 1.2rem;
+      }
+    }
   }
 }

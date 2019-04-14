@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @user = User.find_by(id: @post.user_id)
+    @like = Like.new
   end
 
   def new
