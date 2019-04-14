@@ -2,9 +2,9 @@
   .posts--all
     .posts--all--new
       .posts--all--new__title
-        %p 最新の問題
-        %p フォルダで探す
-        %p カテゴリで探す
+        %p#new 最新の問題
+        %p#folder フォルダで探す
+        %p#category カテゴリで探す
       .posts--all--new__post
         .row
         - @posts.each do |post|
