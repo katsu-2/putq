@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   def index
-    @posts = Post.order('created_at desc').includes(:user)
+    @posts = Post.order('created_at desc').includes(user: :likes)
   end
 
   def show
