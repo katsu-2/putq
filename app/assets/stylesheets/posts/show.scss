@@ -83,5 +83,23 @@
         }
       }
     }
+    &__like {
+      position: relative;
+
+      a {
+        position: absolute;
+        right: 9%;
+        bottom: 5%;
+      }
+
+      #like_span {
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+        font-size: 1.2rem;
+      }
+    }
   }
 }
+
+
