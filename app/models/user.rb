@@ -7,6 +7,9 @@ class User < ApplicationRecord
   has_many :likes
   has_many :liked_posts, through: :likes, source: :post
 
+  #validation
+  validates :name, presence: true, length: { maximum: 15 }
+
   #ユーザーが投稿に対して既にいいねしているか
   def already_liked?(post)
     likes.exists?(post_id: post.id)
