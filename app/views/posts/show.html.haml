@@ -4,7 +4,8 @@
       %p.posts--show__user__avatar
         = image_tag('user.png', class: "user-pic", alt: "ユーザーイメージ")
       .posts--show__user__name
-        %p テストユーザー
+        %p
+          = @user.name
     .posts--show__title
       .posts--show__title__t
         %h2
