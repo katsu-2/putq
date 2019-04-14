@@ -21,8 +21,9 @@
 
         &--each {
           border: 1px solid #cfcfcf;
+          position: relative;
           background: $white;
-          height: 200px;
+          height: 230px;
           margin-top: 20px;
 
           &__title {
@@ -48,17 +49,42 @@
             }
           }
           &__category {
+            position: absolute;
+            bottom: 20%;
+
             span {
               padding-left: 10px;
               .heart-icon {
                 text-decoration: none;
                 color: gray;
               }
-              .tag-icon {
+
+              .cat {
                 text-decoration: none;
                 color: $black;
-                padding-left: 5px;
+                background: #cfcfcf;
+                padding: 5px 10px;
+                font-size: 0.8rem;
+                margin: 0 5px 0 20px;
               }
+            }
+          }
+
+          &__user {
+            display: flex;
+            position: absolute;
+            bottom: 3%;
+            right: 5%;
+
+            p {
+              margin-bottom: 0;
+
+              .user-pic {
+                border-radius: 50%;
+              }
+            }
+            p {
+              margin: 0 5px;
             }
           }
         }

@@ -1,18 +1,19 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   def index
-    @posts = Post.order('created_at desc')
+    @posts = Post.order('created_at desc').includes(:user)
   end
 
   def show
+    @user = User.find_by(id: @post.user_id)
   end
 
   def new
-    @post = Post.new
+    @post = current_user.posts.new
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to posts_path
     else

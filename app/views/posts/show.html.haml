@@ -4,7 +4,8 @@
       %p.posts--show__user__avatar
         = image_tag('user.png', class: "user-pic", alt: "ユーザーイメージ")
       .posts--show__user__name
-        %p テストユーザー
+        %p
+          = @user.name
     .posts--show__title
       .posts--show__title__t
         %h2
@@ -28,6 +29,7 @@
       .posts--show__answer__a
         = simple_format(@post.answer)
     .posts--show__btn
+    - if user_signed_in? && current_user.id == @post.user_id
       .posts--show__btn__b
         = link_to '編集', edit_post_path(@post), class: "edit-btn btn_b"
         = link_to '削除', post_path(@post), class: "delete-btn btn_b", method: :delete, data: { confirm: "削除してもいいですか？"}
