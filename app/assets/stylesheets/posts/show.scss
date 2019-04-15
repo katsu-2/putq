@@ -65,9 +65,17 @@
       & h2 {
         font-weight: bold;
         margin-bottom: 20px;
+
+        #answer-btn {
+          font-size: 1.2rem;
+          background: $mainblue;
+          color: $white;
+          margin-left: 10px;
+          border-radius: 5px;
+        }
       }
       &__a {
-
+        display: none;
       }
     }
     &__btn {
