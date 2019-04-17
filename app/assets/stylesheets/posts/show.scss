@@ -1,28 +1,68 @@
 @import 'common';
 .around {
   .posts--show {
-    background: $white;
-    margin: 40px auto;
-    width: 70%;
+    @include pc {
+      background: $white;
+      margin: 40px auto;
+      width: 70%;
+    };
+    @include tab {
+      background: $white;
+      margin: 40px auto;
+      width: 100%;
+    };
+    @include sp {
+      background: $white;
+      margin: 40px auto;
+      width: 100%;
+    };
 
     &__user {
       display: flex;
 
       &__avatar {
-        width: 50px;
-        height: 50px;
-        padding: 20px;
+        @include pc {
+          width: 50px;
+          height: 50px;
+          padding: 20px;
+        };
+        @include sp {
+          padding: 10px 20px;
+        };
 
         .user-pic {
-          width: 40px;
-          height: 40px;
-          border-radius: 50%;
+          @include pc {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          };
+          @include tab {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+          };
+          @include sp {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+          };
         }
       }
       &__name {
-        padding: 20px;
-        margin-left: 20px;
-        color: $mainblue;
+        @include pc {
+          padding: 20px;
+          margin-left: 20px;
+          color: $mainblue;
+        };
+        @include sp {
+          padding: 20px 50px;
+          color: $mainblue;
+        };
+         p {
+          @include sp {
+            font-size: 1.3rem;
+          };
+         }
       }
     }
     &__title {
@@ -30,20 +70,41 @@
 
       &__t {
         h2 {
-          font-weight: bold;
+          @include pc {
+            font-weight: bold;
+            font-size: 2rem;
+          };
+          @include sp {
+            font-weight: bold;
+            font-size: 1.5rem;
+          };
         }
       }
     }
     &__category {
-      padding: 0 20px 20px 20px;
+      @include pc {
+        padding: 0 20px 20px 20px;
+      };
+      @include sp {
+        padding: 0 20px 20px 20px;
+      };
       &__c {
         span {
           p {
-            display: inline-block;
-            background: #cfcfcf;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            margin: 0 5px 0 0;
+            @include pc {
+              display: inline-block;
+              background: #cfcfcf;
+              padding: 5px 10px;
+              font-size: 0.8rem;
+              margin: 0 5px 0 0;
+            };
+            @include sp {
+              display: inline-block;
+              background: #cfcfcf;
+              padding: 3px 6px;
+              font-size: 0.5rem;
+              margin: 0 5px 0 0;
+            };
           }
         }
       }
@@ -52,8 +113,15 @@
       padding: 40px 20px;
 
       & h2 {
-        font-weight: bold;
-        margin-bottom: 20px;
+        @include pc {
+          font-weight: bold;
+          margin-bottom: 20px;
+        };
+        @include sp {
+          font-weight: bold;
+          margin-bottom: 20px;
+          font-size: 1.5rem;
+        };
       }
       &__c {
         line-height: 2;
@@ -67,8 +135,15 @@
       padding: 0 20px 20px 20px;
 
       & h2 {
-        font-weight: bold;
-        margin-bottom: 20px;
+        @include pc {
+          font-weight: bold;
+          margin-bottom: 20px;
+        };
+        @include sp {
+          font-weight: bold;
+          margin-bottom: 20px;
+          font-size: 1.5rem;
+        };
 
         #answer-btn {
           font-size: 1.2rem;
@@ -82,7 +157,13 @@
         display: none;
 
         p {
-          text-align: left;
+          @include pc {
+            text-align: left;
+          };
+          @include sp {
+            text-align: left;
+            line-height: 2;
+          };
         }
       }
     }

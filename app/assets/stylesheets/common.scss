@@ -48,9 +48,17 @@ $sp: 480px;
   }
 
 .form-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  @include pc {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  };
+  @include sp {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0 5px;
+  };
+
 }
 .form-field {
   width: 100%;
