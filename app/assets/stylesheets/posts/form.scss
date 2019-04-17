@@ -3,10 +3,18 @@
   display: flex;
 
   .form__post {
-    width: 80%;
-    margin: 20px auto;
-    padding: 15px 20px;
-    background: $white;
+    @include pc {
+      width: 80%;
+      margin: 20px auto;
+      padding: 15px 20px;
+      background: $white;
+    };
+    @include sp {
+      width: 100%;
+      margin: 20px auto;
+      padding: 15px 20px;
+      background: $white;
+    };
 
     &__title {
       &__label {

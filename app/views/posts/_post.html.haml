@@ -5,7 +5,7 @@
         = link_to post.title, post_path(post)
     .posts--all--new__post--each__content
       %h2.posts--all--new__post--each__content__c
-        = truncate(post.content, length: 70)
+        = truncate(post.content, length: 100)
 
     .posts--all--new__post--each__category
       %span
