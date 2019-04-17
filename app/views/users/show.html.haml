@@ -1,0 +1,48 @@
+.user-show
+  %section.user
+    .user__info
+      .user__info__upper
+        %p
+          = image_tag('user.png', class: "user-pic", alt: "プロフ画像")
+        %p
+          = @user.name
+      .user__info__follow
+        %p.follow
+        フォロー
+        %span 10
+        %p.follower
+        フォロワー
+        %span 5
+
+    .user__post
+      %ul.user__post__bar
+        %li.num1
+          投稿
+          %span
+        %li.num2
+          いいねした投稿
+          %span
+        %li.num3
+          My問題集
+          %span
+      .user__post__main
+        .user__post__main__p
+          .posts--all--new__post--each
+            .posts--all--new__post--each__title
+              %h2
+                タイトル
+            .posts--all--new__post--each__content
+              %h2.posts--all--new__post--each__content__c
+                コンテントコンテント
+
+            .posts--all--new__post--each__category
+              %span
+                = link_to '#' do
+                  = fa_icon 'heart', id: "heart_red"
+                  %span#like_index
+                    / = post.liked_users.size
+                = link_to 'カテゴリー', '#', class: "cat"
+                = link_to 'カテゴリー', '#', class: "cat"
+                = link_to 'カテゴリー', '#', class: "cat"
+
+  %section.recommend
