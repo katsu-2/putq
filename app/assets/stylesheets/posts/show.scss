@@ -57,6 +57,10 @@
       }
       &__c {
         line-height: 2;
+
+        p {
+          text-align: left;
+        }
       }
     }
     &__answer {
@@ -76,6 +80,10 @@
       }
       &__a {
         display: none;
+
+        p {
+          text-align: left;
+        }
       }
     }
     &__btn {

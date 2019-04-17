@@ -1,0 +1,89 @@
+@import 'common';
+.user-show {
+  display: flex;
+  margin-top: 20px;
+
+  .user {
+    display: flex;
+    width: 60%;
+    border: 1px solid pink;
+    margin: 0 auto;
+
+    &__info {
+      width: 25%;
+      border: 1px solid pink;
+      margin: 20px;
+
+      &__upper {
+        p {
+          margin-top: 10px;
+          color: #2b546a;
+          font-size: 1.3rem;
+          font-weight: bold;
+
+          .user-pic {
+            border-radius: 50%;
+            width: 50%;
+          }
+        }
+        p {
+
+        }
+      }
+
+      &__follow {
+        display: flex;
+
+        p {
+        }
+
+        .follow {
+
+        }
+
+        .follower {
+          margin-left: 10%;
+
+        }
+      }
+    }
+
+    &__post {
+      width: 70%;
+      margin-left: auto;
+      border: 1px solid pink;
+
+      &__bar {
+        list-style: none;
+        display: flex;
+        padding: 10px 0;
+        border: 1px solid #cfcfcf;
+        margin: 20px;
+
+        li {
+          margin: auto;
+          font-size: 1.2rem;
+          color: #2b546a;
+          cursor: pointer;
+
+
+          span {
+
+          }
+        }
+      }
+
+      &__main {
+
+      }
+    }
+  }
+
+  .recommend {
+    width: 30%;
+    border:1px solid pink;
+    height: 400px;
+    margin: 0 auto;
+
+  }
+}

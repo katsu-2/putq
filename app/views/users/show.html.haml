@@ -1,0 +1,32 @@
+.user-show
+  %section.user
+    .user__info
+      .user__info__upper
+        %p
+          = image_tag('user.png', class: "user-pic", alt: "プロフ画像")
+        %p
+          = @user.name
+      .user__info__follow
+        %p.follow
+        フォロー
+        %span 10
+        %p.follower
+        フォロワー
+        %span 5
+
+    .user__post
+      %ul.user__post__bar
+        %li.num1
+          投稿
+          %span
+        %li.num2
+          いいねした投稿
+          %span
+        %li.num3
+          My問題集
+          %span
+      .user__post__main
+        .user__post__main__p
+        = render partial: 'posts/post', locals: { posts: @posts }
+
+  %section.recommend

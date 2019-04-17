@@ -7,26 +7,4 @@
         %p#category カテゴリで探す
       .posts--all--new__post
         .row
-        - @posts.each do |post|
-          .posts--all--new__post--each.col-12
-            .posts--all--new__post--each__title
-              %h2
-                = link_to post.title, post_path(post)
-            .posts--all--new__post--each__content
-              %h2.posts--all--new__post--each__content__c
-                = truncate(post.content, length: 70)
-
-            .posts--all--new__post--each__category
-              %span
-                = link_to '#' do
-                  = fa_icon 'heart', id: "heart_red"
-                  %span#like_index
-                    = post.liked_users.size
-                = link_to 'カテゴリー', '#', class: "cat"
-                = link_to 'カテゴリー', '#', class: "cat"
-                = link_to 'カテゴリー', '#', class: "cat"
-            .posts--all--new__post--each__user
-              %p
-                = image_tag('user.png', class: "user-pic", alt: "プロフ画像", width: 30, height: 30)
-              %p
-                = post.user.name
+        = render partial: 'post', locals: {posts: @posts}
