@@ -27,22 +27,6 @@
           %span
       .user__post__main
         .user__post__main__p
-          .posts--all--new__post--each
-            .posts--all--new__post--each__title
-              %h2
-                タイトル
-            .posts--all--new__post--each__content
-              %h2.posts--all--new__post--each__content__c
-                コンテントコンテント
-
-            .posts--all--new__post--each__category
-              %span
-                = link_to '#' do
-                  = fa_icon 'heart', id: "heart_red"
-                  %span#like_index
-                    / = post.liked_users.size
-                = link_to 'カテゴリー', '#', class: "cat"
-                = link_to 'カテゴリー', '#', class: "cat"
-                = link_to 'カテゴリー', '#', class: "cat"
+        = render partial: 'posts/post', locals: { posts: @posts }
 
   %section.recommend

@@ -7,10 +7,4 @@
         %p#category カテゴリで探す
       .posts--all--new__post
         .row
-        - @posts.each do |post|
-          = render partial: 'post', locals: {post: post}
-          .posts--all--new__post--each__user
-            %p
-              = image_tag('user.png', class: "user-pic", alt: "プロフ画像", width: 30, height: 30)
-            %p
-              = post.user.name
+        = render partial: 'post', locals: {posts: @posts}
