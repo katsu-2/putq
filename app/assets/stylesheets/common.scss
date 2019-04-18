@@ -2,20 +2,15 @@ $mainblue: #4CADE0;
 $white: #fff;
 $black: #333;
 
-$pc: 1024px;
-$tab: 680px;
-$sp: 480px;
+$pc: 768px;
+$sp: 767px;
 
 @mixin pc {
-  @media (max-width: ($pc)) {
+  @media (min-width: ($pc)) {
     @content;
   }
 }
-@mixin tab {
-  @media (max-width: ($tab)) {
-    @content;
-  }
-}
+
 @mixin sp {
   @media (max-width: ($sp)) {
     @content;
