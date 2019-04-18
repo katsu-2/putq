@@ -1,0 +1,64 @@
+@import 'common';
+
+.posts__comment {
+  background: $white;
+
+  @include pc {
+    width: 70%;
+    margin: auto;
+  };
+
+  &__index {
+    @include sp {
+      padding-top: 30px;
+    };
+
+    @include pc {
+      padding: 30px 20px;
+    };
+
+    &__user {
+      display: flex;
+
+      @include sp {
+        padding: 20px 20px 0;
+      };
+
+      &__img {
+        p {
+          img {
+            border-radius: 50%;
+          }
+        }
+      }
+      &__name {
+        @include sp {
+          margin-left: 10px;
+        };
+
+        p {
+          @include sp {
+            font-size: 0.9rem;
+          };
+        }
+      }
+    }
+    &__main {
+      position: relative;
+
+      @include sp {
+        padding: 0 20px;
+      };
+
+      &__c {
+        border: 1px solid #cfcfcf;
+
+        p {
+          color: #2b546a;
+          text-align: left;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+}

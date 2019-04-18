@@ -38,3 +38,5 @@
         = link_to '削除', post_path(@post), class: "delete-btn btn_b", method: :delete, data: { confirm: "削除してもいいですか？"}
     .posts--show__like
       = render 'likes/like'
+  = render 'comments/comment'
+  = render 'comments/form'
