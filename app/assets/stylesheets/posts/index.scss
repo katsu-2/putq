@@ -5,12 +5,10 @@
       @include pc {
         margin: 70px;
       };
-      @include tab {
-        margin: 70px;
-      };
+
       @include sp {
         margin: 20px 0;
-      }
+      };
 
       &__title {
         @include pc {
