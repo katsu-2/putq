@@ -3,8 +3,14 @@
 .form-around {
   background: $white;
 
+  @include pc {
+    width: 70%;
+    margin: auto;
+  };
+
   .posts__comment__form {
     padding-top: 60px;
+    margin: 0 20px;
 
     &__title {
       p {
@@ -13,41 +19,25 @@
         font-weight: bold;
       }
     }
+
     &__main {
+      border-radius: 5px;
+      border: 2px solid #cfcfcf;
+
       &__content {
-        height: 150px;
-        border: 1px solid #cfcfcf;
+        .comment-f {
+          width: 100%;
+        }
+        &__submit {
+          position: relative;
 
-        @include sp {
-          margin: 20px 20px 0;
-        };
-        @include pc {
-          width: 70%;
-          margin: auto;
-        };
-        &--p {
-          h2 {
-
+          .submit-btn {
+            position: absolute;
+            right: 0;
+            border: 1px solid #4DACE0;
+            background: #4DACE0;
+            color: white;
           }
-        }
-      }
-      &__submit {
-        position: relative;
-        height: 50px;
-        border: 1px solid #cfcfcf;
-        margin: 0 20px;
-
-        @include pc {
-          width: 70%;
-          margin: auto;
-        }
-
-        .submit-btn {
-          width: 100px;
-          height: 50px;
-          background: black;
-          position: absolute;
-          right: 0;
         }
       }
     }
