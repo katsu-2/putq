@@ -6,7 +6,6 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to post_path(@post)
     end
-    binding.pry
   end
 
   def destroy
