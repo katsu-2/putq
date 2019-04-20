@@ -4,8 +4,9 @@
       %p
         コメントする
     .posts__comment__form__main
-      .posts__comment__form__main__content
-        .posts__comment__form__main__content--p
-          %h2
-      .posts__comment__form__main__submit
-        .submit-btn
+      = form_for [@post, Comment.new] do |f|
+        .posts__comment__form__main__content
+          = f.text_area :comment, rows: 6 ,maxlength: 2000, placeholder: "コメントする",class: "comment-f"
+          = f.hidden_field :user_id, value: current_user.id
+          .posts__comment__form__main__content__submit
+            = f.submit "コメントする", class: "submit-btn"

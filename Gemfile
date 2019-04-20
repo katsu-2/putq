@@ -8,6 +8,7 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'rb-readline', '~> 0.5.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -48,6 +49,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'factory_bot_rails', '~> 5.0', '>= 5.0.1'
   gem 'rails-controller-testing', '~> 1.0', '>= 1.0.4'
+  gem 'pry-rails', '~> 0.3.9'
 end
 
 group :development do
