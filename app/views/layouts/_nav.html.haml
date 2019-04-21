@@ -15,7 +15,7 @@
             = link_to '問題を作成', new_post_path, class: "dropdown-item"
             = link_to 'フォルダを作成', '#', class: "dropdown-item"
             .dropdown-divider
-            = link_to 'マイページ', '#', class: "dropdown-item"
+            = link_to 'マイページ', user_path(current_user), class: "dropdown-item"
             = link_to 'プロフィール編集', edit_user_registration_path, class: "dropdown-item"
             .dropdown-divider
             = link_to 'ログアウト', destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしてもいいですか？"}, class: "dropdown-item"
