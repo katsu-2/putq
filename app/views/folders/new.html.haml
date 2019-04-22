@@ -1,0 +1,9 @@
+= form_for (@folder) do |f|
+  = f.label :name, 'フォルダ名'
+  = f.text_field :name
+
+  = render partial: 'posts/post', locals: {posts: @posts}
+  / = f.check_box :post_ids, { multiple: true, include_hidden: false}
+  = f.collection_check_boxes(:post_ids, Post.all, :id, :title)
+
+  = f.submit

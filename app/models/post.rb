@@ -5,6 +5,8 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :post_tags, dependent: :destroy
   has_many :tags, through: :post_tags
+  has_many :folder_posts
+  has_many :folders, through: :folder_posts
 
   #validation
   validates :title, presence: true, length: { maximum: 30 }

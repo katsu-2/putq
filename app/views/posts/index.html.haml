@@ -1,10 +1,7 @@
 .posts
   .posts--all
     .posts--all--new
-      .posts--all--new__title
-        %p#new 最新の問題
-        %p#folder フォルダで探す
-        %p#category カテゴリで探す
+      = render 'shared/top'
       .posts--all--new__post
         .row
         = render partial: 'post', locals: {posts: @posts}
