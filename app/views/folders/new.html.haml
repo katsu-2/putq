@@ -2,6 +2,8 @@
   = f.label :name, 'フォルダ名'
   = f.text_field :name
 
-  = collection_check_boxes(:post, :post_ids, Post.all, :id, :title)
+  = render partial: 'posts/post', locals: {posts: @posts}
+  / = f.check_box :post_ids, { multiple: true, include_hidden: false}
+  = f.collection_check_boxes(:post_ids, Post.all, :id, :title)
 
   = f.submit

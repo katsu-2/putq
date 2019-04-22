@@ -28,4 +28,6 @@ class FoldersController < ApplicationController
     @posts = Post.all
   end
 
+
+
 end
