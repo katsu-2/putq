@@ -1,2 +1,6 @@
-- @folders.each do |folder|
-  = folder.name
+= render 'shared/top'
+
+.folder--around
+  .folder--around--each
+    - @folders.each do |folder|
+      = folder.name

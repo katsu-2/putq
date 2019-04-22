@@ -1,12 +1,7 @@
 .posts
   .posts--all
     .posts--all--new
-      .posts--all--new__title
-        %p#new
-          = link_to '最新の問題', root_path
-        %p#folder
-          = link_to 'フォルダで探す', folders_path
-        %p#category カテゴリで探す
+      = render 'shared/top'
       .posts--all--new__post
         .row
         = render partial: 'post', locals: {posts: @posts}

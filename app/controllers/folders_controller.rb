@@ -2,15 +2,15 @@ class FoldersController < ApplicationController
   before_action :get_post, only: [:new, :create]
 
   def index
-    @folders = Folder.all
+    @folders = Folder.all.includes(:user)
   end
 
   def new
-    @folder = Folder.new
+    @folder = current_user.folders.new
   end
 
   def create
-    @folder = Folder.new(folder_params)
+    @folder = current_user.folders.new(folder_params)
     if @folder.save
       redirect_to root_path
     else
