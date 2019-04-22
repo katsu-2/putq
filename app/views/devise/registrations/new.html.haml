@@ -1,69 +1,36 @@
-/ .signup
-/   .sign
-/     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-/       = render "devise/shared/error_messages", resource: resource
-/     .sign__name
-/       .sign__name__l
-/         = f.label :名前, class: "sign-label"
-/       .sign_name__form
-/         = f.text_field :name, class: "sign-form"
+.signup
+  .sign
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = render "devise/shared/error_messages", resource: resource
+      .sign__name
+        .sign__name__l
+          = f.label :名前, class: "sign-label"
+        .sign_name__form
+          = f.text_field :name, class: "sign-form"
 
-/     .sign__email
-/       .sign__email__l
-/         = f.label :メールアドレス, class: "sign-label"
-/       .sign__email__form
-/         = f.email_field :email, class: "sign-form"
+      .sign__email
+        .sign__email__l
+          = f.label :email, class: "sign-label"
+        .sign__email__form
+          = f.email_field :email, class: "sign-form"
 
-/     .sign__pass
-/       .sign__pass__l
-/         = f.label :パスワード, class: "sign-label"
-/         - if @minimum_password_length
-/           %em
-/             (#{@minimum_password_length}文字以上)
-/         %br/
-/       .sign__pass__form
-/         = f.password_field :password, class: "sign-form"
+      .sign__pass
+        .sign__pass__l
+          = f.label :password, class: "sign-label"
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length}文字以上)
+          %br/
+        .sign__pass__form
+          = f.password_field :password, class: "sign-form"
 
-/     .sign__conf
-/       .sign__conf__l
-/         = f.label :パスワードの確認, class: "sign-label"
-/       .sign__conf__form
-/         = f.password_field :password_confirmation, class: "sign-form"
+      .sign__conf
+        .sign__conf__l
+          = f.label :password_confirmation, class: "sign-label"
+        .sign__conf__form
+          = f.password_field :password_confirmation, class: "sign-form"
 
-/     .sign__submit
-/       = f.submit "登録する", class: "submit-btn"
+      .sign__submit
+        = f.submit "登録する", class: "submit-btn"
 
-/     = render "devise/shared/links"
-
-#account-page.account-page
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h2 Create Account
-      %h5 新規アカウントの作成
       = render "devise/shared/links"
-    .account-page__inner--right.user-form
-      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-        = devise_error_messages!
-        .field
-          .field-label
-            = f.label :name
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
-            = f.label :email
-          .field-input
-            = f.email_field :email
-        .field
-          .field-label
-            = f.label :password
-            %i (英数字8文字以上)
-          .field-input
-            = f.password_field :password, autocomplete: "off"
-        .field
-          .field-label
-            = f.label :password_confirmation
-          .field-input
-            = f.password_field :password_confirmation, autocomplete: "off"
-        .actions
-          = f.submit "Create Account", class: 'btn'
