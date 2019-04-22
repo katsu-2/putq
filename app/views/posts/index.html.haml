@@ -2,8 +2,10 @@
   .posts--all
     .posts--all--new
       .posts--all--new__title
-        %p#new 最新の問題
-        %p#folder フォルダで探す
+        %p#new
+          = link_to '最新の問題', root_path
+        %p#folder
+          = link_to 'フォルダで探す', folders_path
         %p#category カテゴリで探す
       .posts--all--new__post
         .row

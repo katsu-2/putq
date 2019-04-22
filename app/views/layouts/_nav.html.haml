@@ -13,7 +13,7 @@
             = image_tag('user.png', class: 'user-nav', width: 40, height: 40)
           .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
             = link_to '問題を作成', new_post_path, class: "dropdown-item"
-            = link_to 'フォルダを作成', '#', class: "dropdown-item"
+            = link_to 'フォルダを作成', new_folder_path, class: "dropdown-item"
             .dropdown-divider
             = link_to 'マイページ', user_path(current_user), class: "dropdown-item"
             = link_to 'プロフィール編集', edit_user_registration_path, class: "dropdown-item"
