@@ -1,6 +1,16 @@
 = render 'shared/top'
+.folder-around
+  - @folders.each do |folder|
+    .folder
+      .folder__title
+        %h2
+          = link_to folder.name, '#'
+      .folder__content
+        %h2.folder__content__c
+          問題問題
 
-.folder--around
-  .folder--around--each
-    - @folders.each do |folder|
-      = folder.name
+      .folder__user
+        %p
+          = image_tag('user.png', class: "user-pic", alt: "プロフ画像", width: 30, height: 30)
+        %p
+          = folder.user.name
