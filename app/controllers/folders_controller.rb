@@ -5,6 +5,11 @@ class FoldersController < ApplicationController
     @folders = Folder.all.includes(:user)
   end
 
+  def show
+    @folder = Folder.find(params[:id])
+    @posts = @folder.post_ids
+  end
+
   def new
     @folder = current_user.folders.new
   end
