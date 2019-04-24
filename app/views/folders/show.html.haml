@@ -1,2 +1,15 @@
-- @posts.each do |post|
-  = post.title
+= @folder.name
+
+/ - @belongPosts.includes(:post).includes(:folder).each do |post|
+/   = post.post.title
+
+.f-around
+  .f
+    .f__title
+      %h2
+        Railsの問題集
+    .f__show
+      .f__show__c
+        .f__show__c__title
+          %p
+            RailsRails
