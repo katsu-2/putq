@@ -1,26 +1,13 @@
 
-/ - @belongPosts.includes(:post).includes(:folder).each do |post|
-/   = post.post.title
-
 .f-around
   .f
     .f__title
       %h1
         = @folder.name
     .f__show
-      .f__show__c
-        .f__show__c__title
-          %p
-            RailsRails
-      .f__show__c
-        .f__show__c__title
-          %p
-            RailsRails
-      .f__show__c
-        .f__show__c__title
-          %p
-            RailsRails
-      .f__show__c
-        .f__show__c__title
-          %p
-            RailsRails
+      - @belongPosts.includes(:post).includes(:folder).each do |post|
+        .f__show__c
+          .f__show__c__title#folder_c
+            %p
+              = post.post.title
+
