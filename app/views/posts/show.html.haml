@@ -6,7 +6,31 @@
       .posts--show__user__name
         %p
           = @user.name
-    = render partial: 'show', locals: { post: @post }
+    .posts--show__title
+      .posts--show__title__t
+        %h2
+          = @post.title
+    .posts--show__category
+      .posts--show__category__c
+        %span.category
+          %p プログラミング
+        %span.category
+          %p Ruby
+        %span.category
+          %p pc
+        %span.category
+          %p エンジニア
+    .posts--show__content
+      %h2 問題
+      .posts--show__content__c
+        = simple_format(@post.content)
+    .posts--show__answer
+      %h2
+        答え
+        %button#answer-btn
+          答えを見る
+      .posts--show__answer__a#answer
+        = simple_format(@post.answer)
     .posts--show__btn
     - if user_signed_in? && current_user.id == @post.user_id
       .posts--show__btn__b

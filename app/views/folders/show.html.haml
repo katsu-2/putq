@@ -7,7 +7,23 @@
     .f__show
       - @belongPosts.includes(:post).includes(:folder).each do |post|
         .f__show__c
-          .f__show__c__title#folder_c
+          .f__show__c__title#folder
             %p
               = post.post.title
+          .f__show__c__main
+            .f__show__c__main--top
+              .f__show__c__main--top__title
+                %h2
+                  問題
+              .f__show__c__main--top__text
+                %p
+                  = post.post.content
+            .f__show__c__main--under
+              .f__show__c__main--under__title
+                %h2
+                  答え
+              .f__show__c__main--under__text
+                %p
+                  = post.post.answer
+
 
