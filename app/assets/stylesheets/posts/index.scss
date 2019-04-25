@@ -154,5 +154,38 @@
       }
     }
   }
+
+  .exhibit-btn {
+    position: fixed;
+    z-index: 1000;
+    bottom: 32px;
+    right: 32px;
+    width: 100px;
+    height: 100px;
+    font-size: 22px;
+    border-radius: 50%;
+    background: #2dbeea;
+    color: #fff;
+    text-align: center;
+
+    @include pc {
+      width: 160px;
+      height: 160px;
+    }
+    .question {
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding-top: 8px;
+    }
+    .pen-icon {
+      font-size: 2rem;
+      margin-top: 5px;
+
+      @include pc {
+        font-size: 3.5rem;
+        margin-top: 15px;
+      }
+    }
+  }
 }
 

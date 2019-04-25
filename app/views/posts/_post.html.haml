@@ -10,7 +10,7 @@
     .posts--all--new__post--each__category
       %span
         = link_to '#' do
-          = fa_icon 'heart', id: "heart_red"
+          = icon("fas", "heart", id: "heart_red")
           %span#like_index
             = post.liked_users.size
         = link_to 'カテゴリー', '#', class: "cat"

@@ -6,7 +6,7 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
-gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'rb-readline', '~> 0.5.5'
 
