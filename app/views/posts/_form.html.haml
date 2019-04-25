@@ -1,6 +1,6 @@
 .form--around
   .form__post
-    = form_with model: Post.new do |f|
+    = form_with model: @post, local: true do |f|
       .form__post__title
         .form__post__title__label
           = f.label :タイトル, class: "form-title"
