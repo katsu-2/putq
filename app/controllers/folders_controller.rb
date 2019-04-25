@@ -7,16 +7,7 @@ class FoldersController < ApplicationController
 
   def show
     @folder = Folder.find(params[:id])
-    #あるフォルダーが属している中間テーブルのポスト
     @belongPosts = @folder.folder_posts
-    # @folderPostIds = []
-
-    # @belongPosts.includes(:post).each do |post|
-    #   @folderPostIds << post.post.id
-    # end
-
-    # @folderPostPosts = FolderPost.where(post_id: @folderPostIds, folder_id: @folder)
-
   end
 
   def new
