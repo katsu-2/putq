@@ -7,4 +7,4 @@
         = render partial: 'post', locals: {posts: @posts}
   = link_to new_post_path, class: "exhibit-btn" do
     .question 投稿
-    %i.fas.fa-pen
+    = icon("fas", "pen", class: "pen-icon")
