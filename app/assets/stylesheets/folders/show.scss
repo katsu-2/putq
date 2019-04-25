@@ -47,35 +47,49 @@
           }
         }
 
-        // &__main {
-        //   &--top {
-        //     &__title {
-        //       h2 {
+        &__main {
+          display: none;
+          padding: 40px 30px 20px;
 
-        //       }
-        //     }
+          &--top {
+            &__title {
+              h2 {
 
-        //     &__text {
-        //       p {
+              }
+            }
 
-        //       }
-        //     }
-        //   }
+            &__text {
+              margin-top: 30px;
 
-        //   &--under {
-        //     &__title {
-        //       h2 {
+              p {
+                text-align: left;
+              }
+            }
+          }
 
-        //       }
-        //     }
+          &--under {
+            margin-top: 50px;
 
-        //     &__text {
-        //       p {
+            &__title {
+              h2 {
 
-        //       }
-        //     }
-        //   }
-        // }
+              }
+            }
+
+            &__text {
+              margin-top: 30px;
+
+              p {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+
+      &__c:hover {
+        background: #e9ecefba;
+        cursor: pointer;
       }
     }
   }
