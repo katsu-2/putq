@@ -30,11 +30,16 @@
       };
 
       &__upper {
+        @include pc {
+          background: $white;
+        };
+
         p {
           margin-top: 10px;
           color: #2b546a;
           font-size: 1.3rem;
           font-weight: bold;
+          // background: $white;
 
           @include sp {
             margin-top: 20px;
@@ -50,12 +55,21 @@
           }
         }
         p {
-
+          @include pc {
+            background: $white;
+            margin-bottom: 0;
+          };
         }
       }
 
       &__follow {
         display: flex;
+
+        @include pc {
+          background: $white;
+          padding-top: 20px;
+        };
+
 
         @include sp {
           position: relative;
@@ -82,11 +96,12 @@
     &__post {
       width: 70%;
       margin-left: auto;
-      border: 1px solid pink;
+      // border: 1px solid pink;
       margin-top: 20px;
 
       @include sp {
         width: 100%;
+        padding-top: 20px;
       };
 
       &__bar {
