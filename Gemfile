@@ -9,6 +9,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'font-awesome-sass', '~> 5.8', '>= 5.8.1'
 gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'rb-readline', '~> 0.5.5'
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
