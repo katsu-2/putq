@@ -12,6 +12,7 @@ class FoldersController < ApplicationController
 
   def new
     @folder = current_user.folders.new
+    @posts = Post.all.page(params[:page]).per(10)
   end
 
   def create
