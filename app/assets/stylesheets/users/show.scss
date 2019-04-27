@@ -9,7 +9,7 @@
   .user {
     @include pc {
       display: flex;
-      width: 60%;
+      width: 80%;
       margin: 0 auto;
     };
 
@@ -96,7 +96,6 @@
     &__post {
       width: 70%;
       margin-left: auto;
-      // border: 1px solid pink;
       margin-top: 20px;
 
       @include sp {
@@ -108,8 +107,8 @@
         list-style: none;
         display: flex;
         padding: 10px 0;
-        border: 1px solid #cfcfcf;
         margin: 20px;
+        text-decoration: none;
 
         li {
           margin: auto;
@@ -128,18 +127,5 @@
 
       }
     }
-  }
-
-  .recommend {
-    width: 30%;
-    border:1px solid pink;
-    height: 400px;
-    margin: 0 auto;
-
-    @include sp {
-      width: 100%;
-      margin-top: 20px;
-    };
-
   }
 }
