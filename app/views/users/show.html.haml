@@ -15,19 +15,22 @@
           %span 5
 
     .user__post
-      %ul.user__post__bar
-        %li.num1
-          投稿
+      %ul.user__post__bar.nav.nav-tabs
+        %li.num1.nav-item
+          = link_to '投稿一覧',"#tab1", {"data-toggle": "tab", class: "nav-link active"}
           %span
-        %li.num2
-          いいねした投稿
+        %li.num2.nav-item
+          = link_to 'いいねした投稿', "#tab2", {"data-toggle": "tab", class: "nav-link"}
           %span
-        %li.num3
-          My問題集
+        %li.num3.nav-item
+          = link_to 'My問題集', "#tab3", {"data-toggle": "tab", class: "nav-link"}
           %span
-      .user__post__main
-        .user__post__main__p
-        = render partial: 'posts/post', locals: { posts: @posts }
-        = paginate @posts
 
-  %section.recommend
+      .user__post__main.tab-content
+        .user__post__main__p.posts#tab1.tab-pane.active
+          = render partial: 'posts/post', locals: { posts: @posts }
+        .user__post__main__p.posts#tab2.tab-pane
+        .user__post__main__p.posts#tab3.tab-pane
+          = render partial: 'shared/folder', locals: { folders: @folders }
+
+        = paginate @posts
