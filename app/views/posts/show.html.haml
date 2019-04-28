@@ -13,13 +13,8 @@
     .posts--show__category
       .posts--show__category__c
         %span.category
-          %p プログラミング
-        %span.category
-          %p Ruby
-        %span.category
-          %p pc
-        %span.category
-          %p エンジニア
+          %p
+            = @post.category.name
     .posts--show__content
       %h2 問題
       .posts--show__content__c
