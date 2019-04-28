@@ -13,9 +13,8 @@
           = icon("fas", "heart", id: "heart_red")
           %span#like_index
             = post.liked_users.size
-        = link_to 'カテゴリー', '#', class: "cat"
-        = link_to 'カテゴリー', '#', class: "cat"
-        = link_to 'カテゴリー', '#', class: "cat"
+        = link_to post.category.name, '#', class: "cat"
+
     .posts--all--new__post--each__user
       %p
         = image_tag('user.png', class: "user-pic", alt: "プロフ画像", width: 30, height: 30)
