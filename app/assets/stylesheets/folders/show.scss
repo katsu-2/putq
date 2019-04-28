@@ -34,6 +34,9 @@
         border-bottom: 1px solid #cfcfcf;
         line-height: 2.5;
         &__title {
+          @include sp {
+            background: white;
+          }
           p {
             text-align: left;
             margin-left: 10%;
@@ -50,6 +53,10 @@
         &__main {
           display: none;
           padding: 40px 30px 20px;
+
+          @include sp {
+            background: white;
+          }
 
           &--top {
             &__title {
