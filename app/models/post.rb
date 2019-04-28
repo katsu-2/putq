@@ -14,4 +14,12 @@ class Post < ApplicationRecord
   validates :answer, presence: true
 
   scope :recent, -> { order('created_at desc') }
+
+  def self.search(search)
+    if search
+      where('title LIKE :search or content LIKE :search', { search: "%#{search}%"})
+    else
+      all
+    end
+  end
 end
