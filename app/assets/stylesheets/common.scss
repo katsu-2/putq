@@ -1,7 +1,7 @@
 $mainblue: #4CADE0;
 $white: #fff;
 $black: #333;
-$navy: #B4C1C9;
+$navy: #2b546a;
 
 $pc: 768px;
 $sp: 767px;
@@ -20,6 +20,10 @@ $sp: 767px;
 
   body {
     background: #FAFAFA;
+
+    @include sp {
+      background: #0066ff1f;
+    }
   }
 
 

@@ -1,0 +1,32 @@
+@import 'common';
+
+.folder-around {
+  @include pc {
+    width: 80%;
+    margin: auto;
+  };
+}
+
+.folder__label {
+  margin-top: 10px;
+  .f__label {
+    color: $navy;
+  }
+
+  .f__name {
+    width: 50%;
+  }
+}
+
+.folder__post {
+  padding-top: 30px;
+}
+
+.f__submit {
+  margin-top: 40px;
+  margin-left: 40%;
+  color: white;
+  background: #2CBEE9;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
