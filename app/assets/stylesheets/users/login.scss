@@ -1,0 +1,97 @@
+@import 'common';
+
+.form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  &__wrap {
+    padding: 50px 30px;
+    padding-bottom: 150px;
+
+    @include pc {
+      padding-bottom: 30px;
+    }
+
+    @include pc {
+      width: 30%;
+      margin: 70px auto;
+      border: 1px solid #cfcfcf;
+      background: $white;
+      border-radius: 10px;
+    }
+
+    &__title {
+      margin-top: 20px;
+
+      h1 {
+        font-size: 30px;
+        font-weight: bold;
+
+        @include pc {
+          color: $mainblue;
+        }
+      }
+    }
+
+    &__name {
+      margin-bottom: 30px;
+    }
+
+    &__email {
+      @include pc {
+        margin-top: 30px;
+      }
+      &__label {
+
+      }
+
+      &__input {
+
+      }
+    }
+
+    &__pass {
+      margin-top: 30px;
+
+      @include pc {
+        margin-top: 40px;
+      }
+      &__label {
+
+      }
+
+      &__input {
+
+      }
+    }
+
+    &__conf {
+      margin-top: 30px;
+    }
+
+    &__check {
+      &__field {
+
+      }
+    }
+
+    &__submit {
+      width: 70%;
+      margin: 50px auto;
+
+      .form-btn {
+        width: 100%;
+        border: 1px solid $mainblue;
+        border-radius: 20px;
+        color: white;
+        padding: 5px;
+        background: $mainblue;
+      }
+    }
+
+    &__link {
+
+    }
+  }
+}
