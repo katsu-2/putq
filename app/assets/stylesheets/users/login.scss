@@ -34,6 +34,10 @@
       }
     }
 
+    &__name {
+      margin-bottom: 30px;
+    }
+
     &__email {
       @include pc {
         margin-top: 30px;
@@ -60,6 +64,10 @@
       &__input {
 
       }
+    }
+
+    &__conf {
+      margin-top: 30px;
     }
 
     &__check {

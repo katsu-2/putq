@@ -1,36 +1,19 @@
-.signup
-  .sign
+
+.form
+  .form__wrap
     = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
       = render "devise/shared/error_messages", resource: resource
-      .sign__name
-        .sign__name__l
-          = f.label :名前, class: "sign-label"
-        .sign_name__form
-          = f.text_field :name, class: "sign-form"
-
-      .sign__email
-        .sign__email__l
-          = f.label :email, class: "sign-label"
-        .sign__email__form
-          = f.email_field :email, class: "sign-form"
-
-      .sign__pass
-        .sign__pass__l
-          = f.label :password, class: "sign-label"
-          - if @minimum_password_length
-            %em
-              (#{@minimum_password_length}文字以上)
-          %br/
-        .sign__pass__form
-          = f.password_field :password, class: "sign-form"
-
-      .sign__conf
-        .sign__conf__l
-          = f.label :password_confirmation, class: "sign-label"
-        .sign__conf__form
-          = f.password_field :password_confirmation, class: "sign-form"
-
-      .sign__submit
-        = f.submit "登録する", class: "submit-btn"
-
-      = render "devise/shared/links"
+      .form__wrap__title
+        %h1 putqへようこそ
+      .form__wrap__name
+        = f.text_field :name, placeholder: "名前",class: "input-default"
+      .form__wrap__email
+        = f.email_field :email, placeholder: "メールアドレス",class: "input-default"
+      .form__wrap__pass
+        = f.password_field :password, placeholder: "パスワード",class: "input-default"
+      .form__wrap__conf
+        = f.password_field :password_confirmation, placeholder: "パスワードの確認",class: "input-default"
+      .form__wrap__submit
+        = f.submit "登録する", class: "form-btn"
+      .form__wrap__login
+        = render "devise/shared/links"
