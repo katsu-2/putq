@@ -2,7 +2,7 @@
 .category
   .category__wrap
     - @categories.each do |category|
-      = link_to '#' do
+      = link_to category_path(category) do
         .category__wrap--each
           .category__wrap--each__icon
           .category__wrap--each__title
