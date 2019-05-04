@@ -2,8 +2,8 @@
 .cat
   .cat__show
     - @child_categories.each do |category|
-      = link_to '#' do
-        .cat__show--each
+      .cat__show--each
+        = link_to '#' do
           .cat__show--each__icon
           .cat__show--each__title
             %h2
