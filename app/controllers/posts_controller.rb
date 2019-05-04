@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user! , only: [:show, :new,:create, :edit, :update ,:destroy]
 
   def index
-    @posts = Post.recent.page(params[:page]).per(10).search(params[:search]).includes(user: :likes).includes(:category)
+    @posts = Post.recent.page(params[:page]).per(10).search(params[:search]).includes(:user).includes(:category)
   end
 
   def show
