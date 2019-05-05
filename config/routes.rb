@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   resources :posts do
     resources :likes, only: [:create, :destroy]
     resources :comments, only: [:create, :destroy]
+    collection do
+      post :get_category_id
+    end
   end
 
   resources :categories, only: [:index, :show]

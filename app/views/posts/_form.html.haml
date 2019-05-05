@@ -20,7 +20,10 @@
       .form__post__category
         .form__post__category__label
           = f.label :カテゴリー, class: "form-title"
-          = f.collection_select :category_id, @category, :id, :name, {prompt: "---"}
+          .form__post__category__label__cat
+            = f.collection_select :category_id, @category, :id, :name, {prompt: "---"}, {class: "select-default category-parent"}
+          .form__post__category__label__cat__child
+            = f.collection_select :category_id, @children, :id, :name, {prompt: "---"}, {class: "select-default category-children"}
       .form__post__submit
         %p
           = f.submit "問題の作成", class: "submit-btn"

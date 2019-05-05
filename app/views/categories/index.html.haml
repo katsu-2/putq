@@ -3,7 +3,7 @@
 .f-around
   .f
     .f__show
-      - @categories.each do |category|
+      - @categories.includes(:children).each do |category|
         .f__show__c#folder
           .f__show__c__title
             %p
@@ -14,4 +14,4 @@
                 .f__show__c__main--top__title
                 .f__show__c__main--top__text
                   %p
-                    = link_to child.name, '#'
+                    = link_to child.name, category_path(child)

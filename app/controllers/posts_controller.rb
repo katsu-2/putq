@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   def new
     @post = current_user.posts.new
     @category = Category.where(parent_id: "0")
+    @children = Category.where(parent_id: @category)
   end
 
   def create
@@ -46,6 +47,14 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to posts_path
+  end
+
+  def get_category_id
+    @category_parent = Category.find(params[:category_id])
+    @category_children = @category_parent.children
+    respond_to do |format|
+      format.json { @category_children }
+    end
   end
 
   private
