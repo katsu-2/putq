@@ -48,6 +48,14 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  def get_category_id
+    @category_parent = Category.find(params[:category_id])
+    @category_children = @category_parent.children
+    respond_to do |format|
+      format.json { @category_children }
+    end
+  end
+
   private
     def post_params
       params.require(:post).permit(:title, :content, :answer, :category_id)
