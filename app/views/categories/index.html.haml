@@ -1,46 +1,17 @@
 = render 'shared/top'
-/ .category
-/   .category__wrap
-/     - @categories.each do |category|
-/       .category__wrap--each
-/         .category__wrap--each__icon
-/         .category__wrap--each__title
-/           = category.name
 
-.category
-  .category__wrap
-    .category__wrap__parent
-      .category__wrap__parent--each
-        .category__wrap__parent--each__title
-          プログラミング
-      .category__wrap__parent--each
-        .category__wrap__parent--each__title
-          語学
-      .category__wrap__parent--each
-        .category__wrap__parent--each__title
-          ビジネス
-      .category__wrap__parent--each
-        .category__wrap__parent--each__title
-          資格
-      .category__wrap__parent--each
-        .category__wrap__parent--each__title
-          趣味
-      .category__wrap__parent--each
-        .category__wrap__parent--each__title
-          その他
-    .category__wrap__children
-      .category__wrap__children--each
-        .category__wrap__children--each__title
-          英語
-        .category__wrap__children--each__title
-          中国語
-        .category__wrap__children--each__title
-          韓国語
-        .category__wrap__children--each__title
-          フランス語
-        .category__wrap__children--each__title
-          タイ語
-        .category__wrap__children--each__title
-          ドイツ語
-        .category__wrap__children--each__title
-          その他
+.f-around
+  .f
+    .f__show
+      - @categories.each do |category|
+        .f__show__c#folder
+          .f__show__c__title
+            %p
+              = category.name
+          .f__show__c__main#folder-main
+            - category.children.each do |child|
+              .f__show__c__main--top
+                .f__show__c__main--top__title
+                .f__show__c__main--top__text
+                  %p
+                    = link_to child.name, '#'

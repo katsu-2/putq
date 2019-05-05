@@ -5,7 +5,7 @@
       %h1
         = @folder.name
     .f__show
-      - @belongPosts.includes(:post).includes(:folder).each do |post|
+      - @belongPosts.includes(:post).each do |post|
         .f__show__c#folder
           .f__show__c__title
             %p
