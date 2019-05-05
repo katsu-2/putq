@@ -15,6 +15,7 @@ class PostsController < ApplicationController
   def new
     @post = current_user.posts.new
     @category = Category.where(parent_id: "0")
+    @children = Category.where(parent_id: @category)
   end
 
   def create
