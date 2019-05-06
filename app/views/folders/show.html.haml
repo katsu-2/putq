@@ -17,13 +17,13 @@
                   問題
               .f__show__c__main--top__text
                 %p
-                  = post.post.content
+                  = simple_format(post.post.content)
             .f__show__c__main--under
               .f__show__c__main--under__title
                 %h2
                   答え
               .f__show__c__main--under__text
                 %p
-                  = post.post.answer
+                  = simple_format(post.post.answer)
 
 
