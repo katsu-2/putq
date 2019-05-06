@@ -1,5 +1,6 @@
 class FoldersController < ApplicationController
   before_action :get_post, only: [:new, :create]
+  before_action :authenticate_user!, only: [:show, :new]
 
   def index
     @folders = Folder.all.includes(:user)
