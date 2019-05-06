@@ -7,8 +7,6 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    # @child_categories = Category.where(parent_id: @category)
-    @posts = Post.where(category_id: @category)
-    # binding.pry
+    @posts = Post.where(category_id: @category).includes(:user).includes(:category)
   end
 end
