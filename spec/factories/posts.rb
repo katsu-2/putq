@@ -4,5 +4,6 @@ FactoryBot.define do
     content { "あいうえおかきくけこ" }
     answer { "さしすせそたちつてと" }
     user
+    category
   end
 end
