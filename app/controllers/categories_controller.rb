@@ -1,8 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.where(parent_id: "0")
-    @child_categories = Category.where(parent_id: @categories)
-    # binding.pry
+    @categories = Category.all
   end
 
   def show
