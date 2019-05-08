@@ -14,11 +14,12 @@ class PostsController < ApplicationController
 
   def new
     @post = current_user.posts.new
+    @children = Category.where(parent_id: @category)
     @category = Category.all
   end
 
   def create
-    # @category = Category.where(parent_id: "0")
+    @category = Category.where(parent_id: "0")
     @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to root_path
@@ -30,7 +31,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    # @category = Category.where(parent_id: "0")
+    @category = Category.where(parent_id: "0")
   end
 
   def update
